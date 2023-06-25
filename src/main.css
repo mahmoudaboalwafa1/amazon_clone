@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+}
+
+:root {
+  --bg-black: #131921;
+  --bg-orange: #cd9042;
+  --bg-yellow: #f0c14b;
+  --bg-border: #d3d3d3;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+div.container {
+  padding: 0 20px;
+}
+
+button {
+  cursor: pointer;
+}

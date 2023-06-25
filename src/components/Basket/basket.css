@@ -1,0 +1,67 @@
+div.basket .container {
+  display: flex;
+  padding: 20px;
+  align-items: start;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  div.basket .container {
+    flex-direction: column;
+  }
+}
+
+.basket-bg img {
+  width: 100%;
+}
+
+div.basket strong {
+  line-height: 2;
+}
+
+div.basket h3 {
+  margin-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--bg-border);
+}
+
+.basket-text {
+  width: 550px;
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.basket-text .container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.basket-text p {
+  margin-bottom: 10px;
+}
+
+.basket-text input {
+  margin-right: 5px;
+}
+
+.basket-text a {
+  background-color: var(--bg-yellow);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  width: 180px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.basket-items {
+  padding: 20px 0;
+}

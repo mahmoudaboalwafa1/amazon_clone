@@ -1,0 +1,85 @@
+header {
+  background-color: var(--bg-black);
+}
+
+header div {
+  display: flex;
+  flex: 1;
+}
+
+header div.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img.logo-icon {
+  width: 100px;
+  margin: 20px 20px 0px 20px;
+}
+
+header button {
+  background-color: transparent;
+}
+
+header form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+header input {
+  padding: 8px 10px;
+  width: 100%;
+}
+
+header input:focus {
+  border-radius: 3px;
+  outline: 2px solid white;
+  border: 2px solid black;
+}
+
+header form img {
+  background-color: var(--bg-orange);
+  width: 32px;
+  margin-top: 3px;
+  padding: 7px;
+}
+
+header nav {
+  display: flex;
+}
+
+header ul {
+  margin: 0 10px;
+}
+
+header ul:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header li,
+header a {
+  color: white;
+}
+
+header li.count {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header li:first-of-type {
+  font-size: 10px;
+}
+
+header a {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+header ul:last-of-type li,
+header li:last-of-type {
+  cursor: pointer;
+}

@@ -1,0 +1,77 @@
+.payment h3 {
+  background-color: #eaeded;
+  border-bottom: 1px solid var(--bg-border);
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+}
+
+.address {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 80px;
+  border-bottom: 1px solid var(--bg-border);
+}
+
+.address li {
+  font-size: 13px;
+}
+
+.payment div.container:not(.payment-method .container) {
+  padding: 0 40px !important;
+  display: flex;
+}
+
+.review {
+  border-bottom: 1px solid var(--bg-border);
+  padding-bottom: 20px;
+}
+
+.payment .container h5 {
+  flex-basis: 60%;
+}
+
+.payment-method {
+  border-bottom: 1px solid var(--bg-border);
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.payment-method::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+  height: 20px;
+  background-color: #eaeded;
+  width: 100%;
+}
+
+.payment-method .container {
+  display: flex;
+  padding-top: 20px !important;
+  justify-content: flex-start;
+}
+
+.payment-method h5 {
+  flex-basis: 40% !important;
+}
+
+.payment-method form {
+  width: 100%;
+}
+
+.payment-method form label {
+  font-weight: bold;
+}
+
+.payment-method button {
+  background-color: var(--bg-yellow);
+  border-color: #9c7e31 #846a29;
+  border-style: solid;
+  border-width: 1px;
+  padding: 3px 6px;
+  width: 100%;
+  margin-top: 10px;
+}

@@ -1,0 +1,41 @@
+.basket-item {
+  display: flex;
+  margin: 20px 0;
+}
+
+.basket-item img:not(.star) {
+  width: 180px;
+  height: 180px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.basket-items-text strong {
+  line-height: 0.9 !important;
+}
+
+.basket-items-text div strong {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.basket-items-text ul {
+  display: flex;
+}
+
+.basket-items-text li {
+  width: 20px;
+}
+
+.basket-items-text img {
+  width: 100%;
+}
+
+.basket-items-text div button {
+  background-color: var(--bg-yellow);
+  border-color: #9c7e31 #846a29;
+  border-style: solid;
+  border-width: 1px;
+  padding: 3px 6px;
+  margin-top: 10px;
+}
