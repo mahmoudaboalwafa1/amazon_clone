@@ -1,28 +1,30 @@
 import React, { useState } from "react";
-import "./signin.css";
-import { logoSignin } from "../../images/index";
+import { useNavigate } from "react-router-dom";
+// firebase Auth
 import { auth } from "../../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+
+import "./signin.css";
+import { logoSignin } from "../../images/index";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  // create User Method
   const Register = (e) => {
-    e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => navigate("/"))
       .catch((err) =>
         setError(err.message.slice(err.message.indexOf("("), -1))
       );
   };
+  // Sigin User Method
   const signIn = (e) => {
-    e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
         navigate("/", { replace: true });
@@ -32,11 +34,12 @@ const Signin = () => {
       );
   };
 
+  // Start SignIn Page
   return (
     <section className="signin">
       <div>
         <img src={logoSignin} alt="logo-signin" />
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
           <div className="container">
             <h2>Sign In</h2>
             <label>Email</label>
@@ -65,5 +68,6 @@ const Signin = () => {
     </section>
   );
 };
+// End SignIn Page
 
 export default Signin;

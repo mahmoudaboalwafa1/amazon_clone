@@ -1,17 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Elements } from "@stripe/react-stripe-js";
+// Components import
 import Collection from "./components/Collection/Collection";
-import Home from "./components/Home/Home";
-import Signin from "./components/signin/Signin";
-import Basket from "./components/Basket/Basket";
-import Payment from "./components/Payment/Payment";
+import { Home, Signin, Basket, Payment } from "./components/index";
 import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PROMISE);
 
 const App = () => {
-  const stripePromise = loadStripe(
-    "pk_test_51N6zBbE8daoX84Cwlyisrc13MFEyxEP84OP8C2HZNo4Qob7KlikhjYoErRV79gUkiAdVUJGHTBYBdYdDwNPmrz5y008I0wnhIN"
-  );
   return (
     <BrowserRouter>
       <Routes>

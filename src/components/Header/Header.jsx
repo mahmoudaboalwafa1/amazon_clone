@@ -43,7 +43,7 @@ const Header = () => {
         </div>
         <nav>
           <ul>
-            <li>Hello {dataUser != null ? dataUser.email : "Guest"}</li>
+            <li>Hello {dataUser ? dataUser.email : "Guest"}</li>
             <Link
               to={dataUser === null && "/signin"}
               onClick={dataUser && signOutUser}

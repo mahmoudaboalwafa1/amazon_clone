@@ -75,3 +75,18 @@
   width: 100%;
   margin-top: 10px;
 }
+
+.payment form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment fieldset {
+  flex-grow: 1;
+}
+
+.payment form button {
+  display: block;
+  width: 100px;
+  height: 100%;
+}

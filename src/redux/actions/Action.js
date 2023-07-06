@@ -1,4 +1,4 @@
-import { SET_USER } from "./Types";
+import { ADD_BASKET, SET_USER } from "./Types";
 
 const SetUser = (payload) => {
   return {
@@ -8,4 +8,8 @@ const SetUser = (payload) => {
   };
 };
 
-export { SetUser };
+const addBasket = (payload) => {
+  return { type: ADD_BASKET, basket: payload };
+};
+
+export { SetUser, addBasket };

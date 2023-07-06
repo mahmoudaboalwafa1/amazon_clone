@@ -1,9 +1,12 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import "./home.css";
+import { addBasket } from "../../redux/actions/Action";
 import { products } from "../../data/index";
+// Firebase Firestore
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase";
+
+import "./home.css";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -19,12 +22,15 @@ const Home = () => {
 
     const database = collection(db, "data_basket");
     addDoc(database, data);
-    dispatch(AddBasket(data));
+    dispatch(addBasket(data));
   };
+
   return (
+    // Start Home Page
     <section className="home">
       <div className="overlay"></div>
       <div className="container">
+        {/* Start Products */}
         {products.map((product, index) => {
           const { textProduct, priceProducts, stars, alt, imgProducts } =
             product;
@@ -67,8 +73,10 @@ const Home = () => {
           );
         })}
       </div>
+      {/* End Products */}
     </section>
   );
+  // End Home Page
 };
 
 export default Home;
